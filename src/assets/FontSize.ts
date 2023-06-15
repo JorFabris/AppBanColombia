@@ -1,0 +1,16 @@
+export default {
+  thirtyTwo: 32,
+  twentyEight: 28,
+  fontTitle: 24,
+  fontTwentyTwo: 22,
+  twenty: 20,
+  fontBigMedium2: 18,
+  seventeen: 17,
+  fontBigMedium: 16,
+  fontSubTitle: 14,
+  fontBigMin: 13,
+  fontMin: 12,
+  eleven: 11,
+  ten: 10,
+  fontTabHome: 11,
+};

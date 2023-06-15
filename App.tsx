@@ -1,7 +1,13 @@
-import {View} from 'react-native';
+import React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+import StackNav from './src/routes/StackNav';
 
 const App = () => {
-  return <View />;
+  return (
+    <NavigationContainer>
+      <StackNav />
+    </NavigationContainer>
+  );
 };
 
 export default App;
