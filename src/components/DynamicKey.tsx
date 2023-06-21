@@ -6,6 +6,8 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import Fonts from '../assets/Fonts';
 import FontSize from '../assets/FontSize';
 import { View } from 'react-native';
+import { getText } from '../i18n/manageLocales';
+import Constants from '../assets/Constants';
 
 const DynamicKey = () => {
   const DURATION = 60000;
@@ -56,7 +58,7 @@ const DynamicKey = () => {
         <Icon name="lock-closed" size={25} />
         <View style={{ justifyContent: 'center', alignItems: 'center' }}>
           <Text style={{ fontFamily: Fonts.REGULAR, fontSize: FontSize.ten }}>
-            Clave dinámica
+            {getText(Constants.IDIOM).login.dynamicKey}
           </Text>
           <Text
             style={{

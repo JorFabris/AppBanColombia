@@ -3,10 +3,10 @@ import { View, TextInput, Text, StyleSheet, ViewStyle } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { DEFAULT_SHADOW } from '../assets/Utils';
 import { COLORS_LIGHT } from '../assets/Colors';
-import { Enumi18n } from '../i18n/Interfacei18n';
 import { getText } from '../i18n/manageLocales';
 import Fonts from '../assets/Fonts';
 import FontSize from '../assets/FontSize';
+import Constants from '../assets/Constants';
 
 interface IProps {
   style?: ViewStyle;
@@ -22,7 +22,9 @@ const CTextInput = ({ style, onChangeText, icon }: IProps) => {
         width: '100%',
         ...style,
       }}>
-      <Text style={styles.label}>{getText(Enumi18n.EN).login.labelInput}</Text>
+      <Text style={styles.label}>
+        {getText(Constants.IDIOM).login.labelInput}
+      </Text>
       <View style={styles.input}>
         {icon && (
           <Icon
@@ -34,7 +36,7 @@ const CTextInput = ({ style, onChangeText, icon }: IProps) => {
         )}
         <TextInput
           onChangeText={(text: string) => onChangeText(text)}
-          placeholder={getText(Enumi18n.EN).login.placeholder}
+          placeholder={getText(Constants.IDIOM).login.placeholder}
         />
       </View>
     </View>

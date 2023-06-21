@@ -2,10 +2,10 @@ import React from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { COLORS_LIGHT } from '../assets/Colors';
 import { View, Text, TouchableOpacity } from 'react-native';
-import { Enumi18n } from '../i18n/Interfacei18n';
 import { getText } from '../i18n/manageLocales';
 import Fonts from '../assets/Fonts';
 import FontSize from '../assets/FontSize';
+import Constants from '../assets/Constants';
 
 const BiometriLogin = () => {
   return (
@@ -32,7 +32,7 @@ const BiometriLogin = () => {
           fontFamily: Fonts.REGULAR,
           fontSize: FontSize.fontBigMin,
         }}>
-        {getText(Enumi18n.EN).login.biometrics.fingerprint}
+        {getText(Constants.IDIOM).login.biometrics.fingerprint}
       </Text>
     </View>
   );

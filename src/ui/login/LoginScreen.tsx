@@ -10,7 +10,6 @@ import {
 import FullLogo from '../../assets/images/full-logo.svg';
 import Frame from '../../assets/images/Frame.svg';
 import { getText } from '../../i18n/manageLocales';
-import { Enumi18n } from '../../i18n/Interfacei18n';
 import Fonts from '../../assets/Fonts';
 import { COLORS_LIGHT } from '../../assets/Colors';
 import FontSize from '../../assets/FontSize';
@@ -18,17 +17,25 @@ import CTextInput from '../../components/CTextInput';
 import CButton from '../../components/CButton';
 import BiometriLogin from '../../components/BiometricLogin';
 import DynamicKey from '../../components/DynamicKey';
+import { StackNavigationProp } from '@react-navigation/stack';
+import Constants from '../../assets/Constants';
 
-const LoginScreen = () => {
+interface IProps {
+  navigation: StackNavigationProp<any, any>;
+}
+
+const LoginScreen = ({ navigation }: IProps) => {
   const [username, setUsername] = useState('');
   return (
     <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
       <SafeAreaView style={{ flex: 1 }}>
         <View style={styles.screen}>
           <FullLogo />
-          <Text style={styles.title}>{getText(Enumi18n.EN).login.title}</Text>
+          <Text style={styles.title}>
+            {getText(Constants.IDIOM).login.title}
+          </Text>
           <Text style={styles.subtitle}>
-            {getText(Enumi18n.EN).login.subtitle}
+            {getText(Constants.IDIOM).login.subtitle}
           </Text>
           <CTextInput
             icon={'person-outline'}
@@ -38,8 +45,8 @@ const LoginScreen = () => {
           />
           <CButton
             disabled={username.length > 0 ? false : true}
-            onPressButton={() => {}}
-            label={getText(Enumi18n.EN).login.btn}
+            onPressButton={() => navigation.replace('TabNav')}
+            label={getText(Constants.IDIOM).login.btn}
           />
           <BiometriLogin />
           <View style={{ height: 150, marginTop: -100 }}>

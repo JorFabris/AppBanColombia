@@ -11,4 +11,26 @@ export default {
     },
     dynamicKey: 'Dynamic Key',
   },
+  tabbar: {
+    home: {
+      title: 'Home',
+    },
+    transfers: {
+      title: 'Transfers',
+    },
+    payments: {
+      title: 'Payments',
+    },
+    security: {
+      title: 'Security',
+    },
+  },
+  home: {
+    greetings: {
+      morning: 'Good morning',
+      afternoon: 'Good afternoon',
+      night: 'Good night',
+    },
+    savingsAccount: 'Savings account',
+  },
 };

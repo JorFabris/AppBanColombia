@@ -12,4 +12,26 @@ export default {
     },
     dynamicKey: 'Clave dinámica',
   },
+  tabbar: {
+    home: {
+      title: 'Inicio',
+    },
+    transfers: {
+      title: 'Transferencias',
+    },
+    payments: {
+      title: 'Pagos',
+    },
+    security: {
+      title: 'Seguridad',
+    },
+  },
+  home: {
+    greetings: {
+      morning: 'Buenos días',
+      afternoon: 'Buenas tardes',
+      night: 'Buenas noches',
+    },
+    savingsAccount: 'Cta de ahorro',
+  },
 };
