@@ -9,7 +9,6 @@ import {
 import Logo from '../../assets/images/logo.svg';
 import { COLORS_LIGHT } from '../../assets/Colors';
 import Icon from 'react-native-vector-icons/Ionicons';
-import { Enumi18n } from '../../i18n/Interfacei18n';
 import { getText } from '../../i18n/manageLocales';
 import Fonts from '../../assets/Fonts';
 import FontSize from '../../assets/FontSize';
@@ -17,6 +16,8 @@ import RootStore from '../../RootStore';
 import DynamicKey from '../../components/DynamicKey';
 import Card from '../../components/Card';
 import Constants from '../../assets/Constants';
+import Item from './components/Item';
+import Services from './components/Services';
 
 const HomeScreen = () => {
   const dateGreeting = new Date();
@@ -30,18 +31,6 @@ const HomeScreen = () => {
 
   return (
     <SafeAreaView>
-      <View
-        style={{
-          height: 500,
-          width: 500,
-          position: 'absolute',
-          alignSelf: 'center',
-          marginTop: -200,
-          backgroundColor: COLORS_LIGHT.whiteThree,
-          borderRadius: 1000,
-          zIndex: -1000,
-        }}
-      />
       <ScrollView
         contentContainerStyle={{
           alignItems: 'center',
@@ -57,10 +46,18 @@ const HomeScreen = () => {
           <Logo />
           <View style={{ flex: 1 }} />
           <TouchableOpacity style={{ marginHorizontal: 5 }}>
-            <Icon name="notifications-outline" size={20} />
+            <Icon
+              name="notifications-outline"
+              color={COLORS_LIGHT.textColor}
+              size={20}
+            />
           </TouchableOpacity>
           <TouchableOpacity style={{ marginHorizontal: 5 }}>
-            <Icon name="log-in-outline" size={20} />
+            <Icon
+              name="log-in-outline"
+              size={20}
+              color={COLORS_LIGHT.textColor}
+            />
           </TouchableOpacity>
         </View>
         <View
@@ -84,8 +81,37 @@ const HomeScreen = () => {
           <DynamicKey />
         </View>
         <View style={{}}>
-          <Card />
+          <Card
+            card={RootStore.card.number}
+            typeCard={RootStore.card.type}
+            balance={RootStore.account.balance}
+          />
         </View>
+        <Item
+          style={{ marginTop: 20 }}
+          label={getText(Constants.IDIOM).home.cards}
+          icon={
+            <Icon
+              name="card-outline"
+              color={COLORS_LIGHT.textColor}
+              size={22}
+              style={{ marginRight: 5 }}
+            />
+          }
+        />
+        <Item
+          style={{ marginVertical: 10 }}
+          label={getText(Constants.IDIOM).home.pocket}
+          icon={
+            <Icon
+              name="wallet-outline"
+              size={22}
+              style={{ marginRight: 5 }}
+              color={COLORS_LIGHT.textColor}
+            />
+          }
+        />
+        <Services />
       </ScrollView>
     </SafeAreaView>
   );

@@ -33,5 +33,23 @@ export default {
       night: 'Buenas noches',
     },
     savingsAccount: 'Cta de ahorro',
+    debit: 'Debito',
+    credit: 'Credito',
+    cards: 'Tarjetas de crédito',
+    pocket: 'Bolsillos',
+    services: {
+      title: 'Servicios',
+      items: {
+        QR: {
+          label: 'Código QR',
+        },
+        requets: {
+          label: 'Solicitar',
+        },
+        explore: {
+          label: 'Explorar',
+        },
+      },
+    },
   },
 };

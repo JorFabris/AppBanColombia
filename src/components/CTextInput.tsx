@@ -37,6 +37,8 @@ const CTextInput = ({ style, onChangeText, icon }: IProps) => {
         <TextInput
           onChangeText={(text: string) => onChangeText(text)}
           placeholder={getText(Constants.IDIOM).login.placeholder}
+          placeholderTextColor={COLORS_LIGHT.placeholderText}
+          style={{ color: COLORS_LIGHT.textColor }}
         />
       </View>
     </View>
@@ -57,6 +59,7 @@ const styles = StyleSheet.create({
   },
   label: {
     fontFamily: Fonts.MEDIUM,
+    color: COLORS_LIGHT.textColor,
     fontSize: FontSize.eleven,
     marginBottom: 5,
   },

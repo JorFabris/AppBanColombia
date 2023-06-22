@@ -47,7 +47,7 @@ const DynamicKey = () => {
         borderRadius: 5,
         ...DEFAULT_SHADOW,
       }}
-      activeOpacity={0.6}>
+      activeOpacity={0.88}>
       <View
         style={{
           flexDirection: 'row',
@@ -55,15 +55,21 @@ const DynamicKey = () => {
           alignItems: 'center',
           padding: 10,
         }}>
-        <Icon name="lock-closed" size={25} />
+        <Icon name="lock-closed" size={25} color={COLORS_LIGHT.textColor} />
         <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-          <Text style={{ fontFamily: Fonts.REGULAR, fontSize: FontSize.ten }}>
+          <Text
+            style={{
+              fontFamily: Fonts.REGULAR,
+              fontSize: FontSize.ten,
+              color: COLORS_LIGHT.textColor,
+            }}>
             {getText(Constants.IDIOM).login.dynamicKey}
           </Text>
           <Text
             style={{
               fontFamily: Fonts.BOLD,
               fontSize: FontSize.fontBigMedium,
+              color: COLORS_LIGHT.textColor,
             }}>
             {code.slice(0, 3)} {code.slice(3, 6)}
           </Text>

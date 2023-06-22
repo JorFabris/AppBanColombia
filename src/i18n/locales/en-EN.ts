@@ -31,6 +31,24 @@ export default {
       afternoon: 'Good afternoon',
       night: 'Good night',
     },
+    debit: 'Debit',
+    credit: 'Credit',
     savingsAccount: 'Savings account',
+    cards: 'Credit cards',
+    pocket: 'Pockets',
+    services: {
+      title: 'Services',
+      items: {
+        QR: {
+          label: 'QR Code',
+        },
+        requets: {
+          label: 'Request',
+        },
+        explore: {
+          label: 'Explore',
+        },
+      },
+    },
   },
 };

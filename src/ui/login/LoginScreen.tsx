@@ -30,6 +30,7 @@ const LoginScreen = ({ navigation }: IProps) => {
     <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
       <SafeAreaView style={{ flex: 1 }}>
         <View style={styles.screen}>
+          <View style={{ flex: 0.2 }} />
           <FullLogo />
           <Text style={styles.title}>
             {getText(Constants.IDIOM).login.title}
@@ -54,6 +55,7 @@ const LoginScreen = ({ navigation }: IProps) => {
           </View>
           <View style={{ flex: 1 }} />
           <DynamicKey />
+          <View style={{ flex: 0.4 }} />
         </View>
       </SafeAreaView>
     </TouchableWithoutFeedback>

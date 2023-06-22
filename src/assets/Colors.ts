@@ -14,6 +14,12 @@ export interface IColors {
   switchDotColor: string;
   screenColor: string;
   componentsColor: string;
+  orange30: string;
+  orange: string;
+  green30: string;
+  greenService: string;
+  purple50: string;
+  purpleService: string;
   placeholderText: string;
   textColor: string;
   textErrorSuccessColor: string;
@@ -57,6 +63,12 @@ export const COLORS_LIGHT: IColors = {
   mainColor: '#FDDA24',
   mainLightColor: '#FFFBE2',
   secondaryColor: '#FF7D35',
+  orange30: '#FFF5F0',
+  orange: '#FA501B',
+  green30: '#EBFFF9',
+  greenService: '#00B07C',
+  purple50: '#F9F5FF',
+  purpleService: '#9044D6',
   purple: '#B47BE8',
   pink: '#FFB9D2',
   blue: '#00C7E5',
@@ -112,6 +124,12 @@ export const COLORS_DARK: IColors = {
   mainColor: '#FDDA24',
   mainLightColor: '#FFFBE2',
   secondaryColor: '#FF7D35',
+  orange30: '#FFF5F0',
+  orange: '#FA501B',
+  green30: '#EBFFF9',
+  greenService: '#00B07C',
+  purple50: '#F9F5FF',
+  purpleService: '#9044D6',
   purple: '#B47BE8',
   pink: '#FFB9D2',
   blue: '#00C7E5',

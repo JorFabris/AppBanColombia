@@ -31,6 +31,7 @@ const BiometriLogin = () => {
           marginTop: 10,
           fontFamily: Fonts.REGULAR,
           fontSize: FontSize.fontBigMin,
+          color: COLORS_LIGHT.textColor,
         }}>
         {getText(Constants.IDIOM).login.biometrics.fingerprint}
       </Text>
